@@ -1,0 +1,90 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: #eef2ec;
+  color: #1d2b24;
+  line-height: 1.7;
+}
+
+header {
+  background: #1f3a2e;
+  color: #f3efe2;
+  padding: 96px 24px 80px;
+  text-align: center;
+}
+header h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 6vw, 3.4rem);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+header p {
+  max-width: 46ch;
+  margin: 16px auto 0;
+  color: #c9d6cb;
+}
+
+.konten { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+
+section {
+  min-height: 420px;          
+  padding: 56px 0;
+  border-bottom: 1px solid #cdd8cf;
+}
+section h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.7rem;
+  margin-bottom: 14px;
+  color: #1f3a2e;
+}
+section p { margin-bottom: 14px; max-width: 62ch; }
+
+footer {
+  text-align: center;
+  padding: 48px 24px 120px;
+  color: #5b6b61;
+}
+
+#btnTop {
+  display: none;               
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 58px;
+  height: 58px;
+  border: 2px solid #f2a541;
+  border-radius: 50%;
+  background: #1f3a2e;
+  color: #f2a541;
+  cursor: pointer;
+  z-index: 100;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.5;                
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  box-shadow: 0 6px 18px rgba(31, 58, 46, 0.35);
+}
+
+#btnTop.tampil {
+  display: flex;
+  animation: naik 0.35s ease-out;
+}
+
+#btnTop:hover,
+#btnTop:focus-visible {
+  opacity: 1;
+  transform: translateY(-4px);
+}
+#btnTop:focus-visible { outline: 3px solid #f2a541; outline-offset: 3px; }
+
+#btnTop svg { width: 30px; height: 30px; }
+
+#btnTop:hover .panah { animation: panah 0.7s ease-in-out infinite alternate; }
+
+@keyframes naik  { from { transform: translateY(24px); } to { transform: translateY(0); } }
+@keyframes panah { from { transform: translateY(2px); }  to { transform: translateY(-3px); } }
+
+@media (prefers-reduced-motion: reduce) {
+  #btnTop, #btnTop.tampil, #btnTop:hover .panah { animation: none; transition: none; }
+}
