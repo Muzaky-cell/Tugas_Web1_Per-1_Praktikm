@@ -1,0 +1,24 @@
+body {
+    font-family: "Times New Roman", serif;
+    margin: 20px;
+}
+
+#password {
+    width: 300px;
+    padding: 8px;
+    font-size: 20px;
+    border: 2px solid #555;
+    border-radius: 6px;
+}
+
+#tampil {
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+    vertical-align: middle;
+}
+
+label {
+    font-size: 22px;
+    margin-left: 6px;
+}

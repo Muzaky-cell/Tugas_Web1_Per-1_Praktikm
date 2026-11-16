@@ -1,0 +1,32 @@
+body {
+    font-family: "Times New Roman", serif;
+    margin: 20px;
+}
+
+button {
+    font-family: inherit;
+    font-size: 16px;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+table {
+    border: 1px solid #999;
+    border-collapse: separate;
+    border-spacing: 2px;
+}
+
+td {
+    border: 1px solid #555;
+    padding: 2px 4px;
+    font-size: 20px;
+}
+
+.hijau  { background-color: #00ff00; } /* header baris & kolom */
+.kuning { background-color: #ffff00; } /* hasil ganjil */
+.cyan   { background-color: #00ffff; } /* hasil genap */
+.putih  { background-color: #ffffff; } /* sel pojok "bilangan" */
+
+.kolom-label {
+    width: 90px;
+}
